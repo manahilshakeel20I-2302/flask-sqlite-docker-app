@@ -1,28 +1,75 @@
-Overview of the Flask Web Application
-Purpose: The application serves as a simple user input form that allows users to submit their names and email addresses. The data entered by users is stored in a SQLite database for potential later use or analysis.
+# Flask Web App with Docker Compose
 
-Core Components:
+A containerized Flask web application that collects user data through a simple form and stores it in a database. This project demonstrates **full-stack basics + Docker Compose orchestration** in a clean and reproducible setup.
 
-Frontend:
+---
 
-Built with HTML and Jinja2 templating, the frontend provides a user-friendly interface to collect input.
-It includes a form where users can enter their names and email addresses.
-Backend:
+## Overview
 
-The backend is built using Flask, a lightweight web framework for Python.
-It handles the application's logic, including routing requests, processing form submissions, and interacting with the database.
-It contains routes for rendering the main page and processing form submissions.
-Database:
+This application allows users to submit their **name and email address**, which are then stored in a SQLite database for future use or analysis.
 
-The application uses SQLite as its database to store user data.
-A SQLAlchemy ORM is used for database interaction, allowing for easy data manipulation without writing raw SQL queries.
-User inputs are stored in a database table whenever a user submits the form.
-Key Features:
+It is designed to showcase:
+- Backend development with Flask  
+- Database integration using SQLAlchemy  
+- Frontend templating with Jinja2  
+- Containerization using Docker and Docker Compose  
 
-User Input Form:
+---
 
-The main page displays a form with fields for users to enter their name and email.
-Upon submission, the application processes the input and stores it in the database.
-Flashing Messages:
+## Core Components
 
-After a successful submission, a success message is displayed to the user, confirming that their information has been stored.
+### Frontend
+- Built using **HTML + Jinja2 templates**
+- Simple and user-friendly form interface
+- Collects user name and email
+
+### Backend
+- Developed with **Flask (Python)**
+- Handles routing, form submission, and business logic
+- Processes user input and communicates with the database
+
+### Database
+- Uses **SQLite** for lightweight data storage
+- Integrated via **SQLAlchemy ORM**
+- Stores user-submitted data in a structured table
+
+---
+
+## Key Features
+
+- **User Input Form**  
+  Users can submit their name and email through a web interface  
+
+- **Data Persistence**  
+  Submitted data is stored in a SQLite database  
+
+- **Flash Messages**  
+  Displays success messages after form submission  
+
+- **Dockerized Setup**  
+  Fully containerized for easy setup and deployment  
+
+- **Docker Compose Orchestration**  
+  Simplifies running the application with a single command  
+
+---
+
+## Tech Stack
+
+- **Frontend:** HTML, Jinja2  
+- **Backend:** Flask (Python)  
+- **Database:** SQLite, SQLAlchemy  
+- **DevOps:** Docker, Docker Compose  
+
+---
+
+## Getting Started
+
+### Prerequisites
+- Docker  
+- Docker Compose  
+
+### Run the Application
+
+```bash
+docker-compose up --build
